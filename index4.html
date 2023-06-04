@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css">
+    <link rel="icon" typr="image/x-icon" href="img/icon.png">
+    <title> Credit Card Validator </title>
+</head>
+
+<body>
+    <div class="card">
+        <form>
+            <h1 class="card_title">
+                Enter Credit Card Information
+            </h1>
+            <div class="card_row">
+                <div class="card_col">
+                    <label class="card_label" for="cardNumber"> Card Number </label>
+                    <input class="card_input card_input-large" id="cardNumber" name="cardNumber" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                </div>
+
+                <div class="card_col card_chip">
+                    <img src="img/chip.svg" alt="chip">
+                </div>
+            </div>
+            <div class="card_row">
+                <div class="card_col">
+                    <label class="card_label" for="nom-titulaire">Cardholder name :</label>
+                    <input class="card_input"  type="text" id="nom-titulaire" required>
+                    <label class="card_label" for="card_Expr"> Expiration Date  </label>
+                    <input class="card_input" id="card_Expr" name="exprDate" type="text" placeholder="MM/YY" required>
+                    <br>
+                    <label>
+                        <input class="card_label" type="checkbox" id="accept-terms" name="accept-terms">
+                        J'accepte les termes et conditions.
+                      </label>
+                    <br>
+                    <button type="submit" id="payer">Payer</button>
+                </div>
+                <div class="card_col">
+                    <label class="card_label" for="card_CVC"> CVC/CVV </label>
+                    <input class="card_input" id="card_CVC" name="CVC" type="text" placeholder="***" required>               
+                </div>
+                <div class="card_col card_type"><i id="cardType"></i></div>
+            </div>
+            <div class="card_input" class="card_col"style="text-align:center;" >
+                <p id="paymentMessage"></p>
+            </div>
+
+           
+            
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="public/scripts/main.js"></script>  
+</body>
+</html>
